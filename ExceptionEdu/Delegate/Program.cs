@@ -6,22 +6,32 @@
 /// Вызовите эту функцию в классе Main при помощи делегата и отобразите результат в консольном сообщении.
 /// 
 /// 9.3.3 Используя ваше приложение из задания 9.3.2, реализуйте вызов делегата двумя разными способами.
+/// 9.3.4 Реализуйте консольное приложение, в котором существует две функции: 
+/// первая функция вычитает второе число из первого и отображает результат в консольном сообщении, 
+/// вторая функция складывает два числа и отображает результат в консоли. 
+/// Реализуйте вызов этих двух функций через многоадресный делегат.
 /// </summary>
 namespace Delegate
 {
     class Program
     {
-        delegate int SubstractDelrgate(int a, int b);
+        delegate void CalculateDelegate(int a, int b);
         static void Main(string[] args)
         {
-            SubstractDelrgate substractDelrgate = Substract;
-            Console.WriteLine(substractDelrgate.Invoke(1, 2));
-            Console.WriteLine(substractDelrgate(1, 2));
+            CalculateDelegate calculateDelegate = Substract;
+            calculateDelegate += Sum;
+            calculateDelegate.Invoke(2, 1);
 
         }
-        static int Substract(int a, int b)
+        static void Substract(int a, int b)
         {
-            return a - b;
+
+            Console.WriteLine("{0} - {1} = {2}", a, b, a - b);
+        }
+
+        static void Sum(int a, int b)
+        {
+            Console.WriteLine("{0} + {1} = {2}", a, b, a + b);
         }
     }
 }
