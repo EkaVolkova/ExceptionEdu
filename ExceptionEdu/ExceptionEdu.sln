@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryCatchArgumentOutOfRangeE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryCatchRankException", "TryCatchRankException\TryCatchRankException.csproj", "{4F849D0E-840E-451C-9C91-1E401083E620}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegate", "Delegate\Delegate.csproj", "{0B33B676-C188-4268-BD22-3DABE3C815E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4F849D0E-840E-451C-9C91-1E401083E620}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F849D0E-840E-451C-9C91-1E401083E620}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F849D0E-840E-451C-9C91-1E401083E620}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B33B676-C188-4268-BD22-3DABE3C815E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B33B676-C188-4268-BD22-3DABE3C815E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B33B676-C188-4268-BD22-3DABE3C815E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B33B676-C188-4268-BD22-3DABE3C815E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
