@@ -14,6 +14,7 @@
 ///         Console.WriteLine(_message);
 ///     }
 ///     Реализуйте в данном решении анонимный метод, не сломав логику приложения.
+///     9.3.14 Реализуйте лямбда-оператор во время вызова анонимного метода.
 /// </summary>
 namespace AnonymousDelegates
 {
@@ -22,11 +23,7 @@ namespace AnonymousDelegates
         delegate void ShowMessageDelegate(string _message);
         static void Main(string[] args)
         {
-            ShowMessageDelegate showMessageDelegate = delegate(string _message)
-            {
-                Console.WriteLine(_message);
-                
-            };
+            ShowMessageDelegate showMessageDelegate = (string _message) => Console.WriteLine(_message);
             showMessageDelegate.Invoke("Hello World!");
             Console.Read();
         }
