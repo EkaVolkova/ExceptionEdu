@@ -10,6 +10,7 @@
 /// первая функция вычитает второе число из первого и отображает результат в консольном сообщении, 
 /// вторая функция складывает два числа и отображает результат в консоли. 
 /// Реализуйте вызов этих двух функций через многоадресный делегат.
+/// 9.3.5 Используя решение из предыдущей задачи 9.3.4, реализуйте удаление метода Sum из многоадресного делегата CalculateDelegate.
 /// </summary>
 namespace Delegate
 {
@@ -20,6 +21,8 @@ namespace Delegate
         {
             CalculateDelegate calculateDelegate = Substract;
             calculateDelegate += Sum;
+            calculateDelegate.Invoke(2, 1);
+            calculateDelegate -= Sum;
             calculateDelegate.Invoke(2, 1);
 
         }
