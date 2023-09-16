@@ -20,6 +20,7 @@
 ///     }
 ///     
 /// Реализуйте в данном решении анонимный метод, не сломав логику приложения.
+/// 9.3.15 Реализуйте лямбда-оператор во время вызова анонимного метода.
 /// </summary>
 namespace AnonymousDelegates2
 {
@@ -28,10 +29,7 @@ namespace AnonymousDelegates2
         delegate int RandomNumberDelegate();
         static void Main(string[] args)
         {
-            RandomNumberDelegate randomNumberDelegate = delegate()
-            {
-                return new Random().Next(0, 100);
-            };
+            RandomNumberDelegate randomNumberDelegate = () => new Random().Next(0, 100);
             int result = randomNumberDelegate.Invoke();
             Console.WriteLine(result);
             Console.Read();
